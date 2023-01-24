@@ -8,4 +8,6 @@ RUN npm install
 COPY ./src ./src
 COPY ./videos ./videos
 
+EXPOSE ${PORT}
+
 CMD npm start

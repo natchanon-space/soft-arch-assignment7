@@ -1,9 +1,21 @@
-# Chapter-2
+# Kubernetes Assignment
 
-Code and examples for Chapter 2 of [Bootstrapping Microservices](https://www.bootstrapping-microservices.com).
+Please follow these steps in order to deploy.
 
-In chapter 2 you build your first microservice using Node.js.
+```shell
+# build docker image
+docker build -t natchanon/video-streaming .
 
-Please see README in each sub-directory for instructions on starting the particular example.
+# deploy kubernetes cluster
+kubectl create -f deployment.yml
+```
 
-[Click here to support my work](https://www.codecapers.com.au/about#support-my-work)
+To check deployment status
+```
+minikube dashboard --url
+```
+
+Create tunnel for checking running application
+```
+minikube service video-streaming-service
+```
